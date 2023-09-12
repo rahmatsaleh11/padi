@@ -1,0 +1,48 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model user {
+  id Int @id @default(autoincrement())
+  username String @unique
+  password String
+  role Role
+  no_hp String
+  padi padi?
+}
+enum Role {
+  admin
+  user
+}
+
+model padi {
+  id Int @id @default(autoincrement())
+  user user @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  user_id Int @unique
+  tanggal_awal DateTime
+  tanggal_panen DateTime
+  
+}
+
+model Berita {
+  id Int @id @default(autoincrement())
+  title String
+  isi String @db.LongText()
+  thumb String? 
+  created_at DateTime 
+  updated_at DateTime @updatedAt
+}
+
+model Info {
+  umur Int @id
+  tinggi Float 
+  info String @db.MediumText()
+}

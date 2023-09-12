@@ -1,0 +1,7 @@
+Pertama ketik npm i --global yarn
+
+kedua ketik yarn 
+
+ketika ketik yarn dev
+
+masuk ke http://localhost5173

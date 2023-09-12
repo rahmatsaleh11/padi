@@ -1,0 +1,14 @@
+{
+    "appId": "io.ionic.nameofyourapp",
+    "appName": "Monitoring Tanaman Padi",
+    "bundledWebRuntime": false,
+    "npmClient": "yarn",
+    "webDir": "dist",
+    "cordova": {},
+    "plugins": {
+      "SplashScreen": {
+        "launchShowDuration": 0,
+        "androidScheme": "http"
+      }
+    }
+  }

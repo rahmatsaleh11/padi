@@ -1,0 +1,16 @@
+{
+  "name": "monitoringpadi",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react",
+  "serve": {
+    "path": "dist"
+  },
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://168.138.184.186:3089/api"
+    }
+  ]
+}
